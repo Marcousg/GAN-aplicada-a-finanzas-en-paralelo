@@ -47,27 +47,6 @@ data_tickers.reindex(returns.index).ffill().bfill()
 
 features = data_tickers / 100.0 # Convertir a decimal (tasas están en %)
 
-
-#for name, ticker in feature_tickers.items():
- #    print(f"Descargando feature {name} ({ticker})...")
-  #  
-   # df = yf.download(ticker,
-    #                 start="2013-01-01",
-    #                 end="2025-01-01",
-    #                 interval="1d")[["Close"]]
-    
-    # Alinear fechas con los retornos
-    #df = df.reindex(returns.index)
-    
-    # Rellenar faltantes
-    #df = df.ffill().bfill()
-    
-    # Convertir a decimal (tasas están en %)
-    #feature_data[name] = df["Close"] / 100.0
-
-# Crear DataFrame de features SIN ERRORES
-#features = pd.DataFrame(feature_data, index=returns.index)
-
 # -----------------------------------------------
 # 4. Unificación del dataset: R_h + F_h
 # -----------------------------------------------
